@@ -1,0 +1,56 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Notebook Swagger API documentation",
+        "contact": {
+            "email": "pes13@yandex.ru"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:7777/api",
+            "description": "Notebook Swagger API server"
+        }
+    ],
+    "paths": {
+        "/notebookusers": {
+            "get": {
+                "tags": [
+                    "Notebook"
+                ],
+                "summary": "Display a listing of the resource",
+                "operationId": "notebookusersAll",
+                "responses": {
+                    "200": {
+                        "description": "Everything is fine"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "X-APP-ID": {
+                "type": "apiKey",
+                "name": "X-APP-ID",
+                "in": "header"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Notebook",
+            "description": "Some example pages"
+        }
+    ]
+}
